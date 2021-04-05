@@ -1,21 +1,21 @@
 var args = process.argv.slice(2);
 
-if (!args[0] || !args[1] || !args[2]) {
-  console.log("usage: node configuration_set_name sender@example.com destination@example.com")
+if (!args[0] || !args[1] || !args[2] || !args[3]) {
+  console.log("usage: node region configuration_set_name sender@example.com destination@example.com")
   return;
 }
 
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 // Set the region
-AWS.config.update({region: 'eu-north-1'});
+AWS.config.update({region: args[0]});
 
 // Create sendEmail params
 var params = {
-  ConfigurationSetName: args[0],
+  ConfigurationSetName: args[1],
   Destination: {
     ToAddresses: [
-      args[2]
+      args[3]
     ]
   },
   Message: {
@@ -34,9 +34,9 @@ var params = {
       Data: 'Test email'
      }
     },
-  Source: args[1],
+  Source: args[2],
   ReplyToAddresses: [
-     args[1]
+     args[2]
   ],
 };
 
