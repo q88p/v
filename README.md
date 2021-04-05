@@ -27,11 +27,11 @@ login to your mailbox and verify your addess to allow SES to use it as from
 ssh into AWS EC2
 ```
 ```
-node send_email.js ses-configuration-tf EMAIL success@simulator.amazonses.com
-node send_email.js ses-configuration-tf EMAIL bounce@simulator.amazonses.com
-node send_email.js ses-configuration-tf EMAIL ooto@simulator.amazonses.com
-node send_email.js ses-configuration-tf EMAIL complaint@simulator.amazonses.com
-node send_email.js ses-configuration-tf EMAIL suppressionlist@simulator.amazonses.com
+node REGION send_email.js ses-configuration-tf EMAIL success@simulator.amazonses.com
+node REGION send_email.js ses-configuration-tf EMAIL bounce@simulator.amazonses.com
+node REGION send_email.js ses-configuration-tf EMAIL ooto@simulator.amazonses.com
+node REGION send_email.js ses-configuration-tf EMAIL complaint@simulator.amazonses.com
+node REGION send_email.js ses-configuration-tf EMAIL suppressionlist@simulator.amazonses.com
 ```
 ```
 https://SOF-ELK-ip-address:5601
