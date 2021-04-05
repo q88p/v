@@ -1,0 +1,3 @@
+[submodule "sof-elk"]
+	path = sof-elk
+	url = https://github.com/q88p/sof-elk
