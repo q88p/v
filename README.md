@@ -4,6 +4,10 @@ brew install terraform
 brew install ansible
 ```
 ```
+create an account for GEOIP https://www.maxmind.com/
+Generate a license key and config file for use with geoipupdate versions **older than 3.1.1.**
+```
+```
 git clone https://github.com/q88p/v.git
 cd v/
 terraform init
