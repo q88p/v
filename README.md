@@ -3,10 +3,8 @@
 brew install terraform
 brew install ansible
 ```
-```
 create an account for GEOIP https://www.maxmind.com/
 Generate a license key and config file for use with geoipupdate versions **older than 3.1.1.**
-```
 ```
 git clone https://github.com/q88p/v.git
 cd v/
@@ -26,10 +24,7 @@ terraform apply \
 -var "aws_region=REGION" \
 -var "do_ssh_key_name=DO_SSH_KEY_NAME"
 ```
-```
-login to your mailbox and verify your addess to allow SES to use it as from
-ssh into AWS EC2
-```
+login to your mailbox and verify your addess to allow SES to use it as from ssh into AWS EC2
 ```
 node REGION send_email.js ses-configuration-tf EMAIL success@simulator.amazonses.com
 node REGION send_email.js ses-configuration-tf EMAIL bounce@simulator.amazonses.com
@@ -37,12 +32,10 @@ node REGION send_email.js ses-configuration-tf EMAIL ooto@simulator.amazonses.co
 node REGION send_email.js ses-configuration-tf EMAIL complaint@simulator.amazonses.com
 node REGION send_email.js ses-configuration-tf EMAIL suppressionlist@simulator.amazonses.com
 ```
-```
-https://SOF-ELK-ip-address:5601
-Create index pattern ses-*
-Discover
-Change index pattern to ses-*
-```
+https://SOF-ELK-ip-address:5601 \
+Create index pattern ses-\* \
+Discover\
+Change index pattern to ses-\*
 ```
 terraform destroy \
 -var "my_email=EMAIL" \
